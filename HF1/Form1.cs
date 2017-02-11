@@ -110,7 +110,7 @@ namespace HF1
         private void button1_Click(object sender, EventArgs e)
         {
             //0
-            textBox1.Text = textBox1.Text + 0;
+            textBox1.Text = textBox1.Text + 0;            
         }
     }
 }
