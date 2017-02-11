@@ -41,17 +41,29 @@ namespace HF1
         private void button13_Click(object sender, EventArgs e)
         {
             //+
+            szam = int.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            Szamolasi_eset = 1;
 
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             //-
+            szam = int.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            Szamolasi_eset = 2;
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             //*
+            szam = int.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            Szamolasi_eset = 3;
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -131,25 +143,25 @@ namespace HF1
             switch (Szamolasi_eset)
             {
                 case 1:
-                    eredmeny = szam + int.Parse(textBox1.Text);
+                    eredmeny = Calculator.osszeada(szam, int.Parse(textBox1.Text));
                     textBox1.Text = eredmeny.ToString();             //összeadás
                     break;
 
                 case 2:
-                    eredmeny = szam - int.Parse(textBox1.Text);
+                    eredmeny = eredmeny = Calculator.kivonas(szam, int.Parse(textBox1.Text));
                     textBox1.Text = eredmeny.ToString();             //kivonás
                     break;
 
                 case 3:
-                    eredmeny = szam * int.Parse(textBox1.Text);
+                    eredmeny = Calculator.szorzas(szam, int.Parse(textBox1.Text));
                     textBox1.Text = eredmeny.ToString();                //szorzás
                     break;
 
                 case 4:
-                    if(int.Parse(textBox1.Text) != 0)
+                    if (int.Parse(textBox1.Text) != 0)
                     {
-                    eredmeny = szam / int.Parse(textBox1.Text);
-                    textBox1.Text = eredmeny.ToString();                 //osztás                    
+                        eredmeny = Calculator.osztas(szam, int.Parse(textBox1.Text));
+                        textBox1.Text = eredmeny.ToString();                 //osztás                    
                     }
                     else
                     {
@@ -159,18 +171,12 @@ namespace HF1
                 default: break;
             }
         }
-
-
-                    textBox1.Text = eredmeny.ToString();                 //osztás
-                    break;
-
-                default: break;
-            }
-        }
-
-
-       
-
-       
     }
 }
+
+        
+
+       
+
+       
+   
