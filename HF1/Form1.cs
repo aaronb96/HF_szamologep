@@ -23,7 +23,7 @@ namespace HF1
         private void button9_Click(object sender, EventArgs e)
         {
             //8
-            textBox1.Text = textBox1.Text + 8;
+            textBox1.Text = textBox1.Text + 8; 
         }
 
         private void button2_Click(object sender, EventArgs e)
