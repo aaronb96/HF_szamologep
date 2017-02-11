@@ -9,5 +9,9 @@ namespace HF1
     class Calculator
     {
 
+      /*  public static összeadás(int egyikszam, int masikszam)
+        {
+            return egyikszam + masikszam;
+        }*/
     }
 }

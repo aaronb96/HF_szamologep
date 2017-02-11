@@ -12,6 +12,9 @@ namespace HF1
 {
     public partial class Form1 : Form
     {
+        int szam;
+        int eredmeny;
+        int Szamolasi_eset;
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +41,7 @@ namespace HF1
         private void button13_Click(object sender, EventArgs e)
         {
             //+
+            
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -110,7 +114,37 @@ namespace HF1
         private void button1_Click(object sender, EventArgs e)
         {
             //0
-            textBox1.Text = textBox1.Text + 0;            
+            textBox1.Text = textBox1.Text + 0;
         }
+
+
+        public void szamito()
+        {
+            switch (Szamolasi_eset)
+            {
+                case 1:
+                    eredmeny = szam + int.Parse(textBox1.Text);
+                    textBox1.Text = eredmeny.ToString();             //összeadás
+                    break;
+
+                case 2:
+                    eredmeny = szam - int.Parse(textBox1.Text);
+                    textBox1.Text = eredmeny.ToString();             //kivonás
+                    break;
+
+                case 3:
+                    eredmeny = szam * int.Parse(textBox1.Text);
+                    textBox1.Text = eredmeny.ToString();                //szorzás
+                    break;
+
+                case 4:
+                    eredmeny = szam / int.Parse(textBox1.Text);
+                    textBox1.Text = eredmeny.ToString();                 //osztás
+                    break;
+
+                default: break;
+            }
+        }
+
     }
 }
