@@ -23,7 +23,7 @@ namespace HF1
         private void button9_Click(object sender, EventArgs e)
         {
             //8
-            textBox1.Text = textBox1.Text + 8; 
+            textBox1.Text = textBox1.Text + 8;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace HF1
         private void button13_Click(object sender, EventArgs e)
         {
             //+
-            
+
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -57,6 +57,10 @@ namespace HF1
         private void button16_Click(object sender, EventArgs e)
         {
             // /
+            szam = int.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            Szamolasi_eset = 4;
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -117,8 +121,12 @@ namespace HF1
             textBox1.Text = textBox1.Text + 0;
         }
 
+        private void button17_Click(object sender, EventArgs e)
+        {
+            szamito(Szamolasi_eset);
+        }
 
-        public void szamito()
+        public void szamito(int Szamolasi_eset)
         {
             switch (Szamolasi_eset)
             {
@@ -138,7 +146,21 @@ namespace HF1
                     break;
 
                 case 4:
+                    if(int.Parse(textBox1.Text) != 0)
+                    {
                     eredmeny = szam / int.Parse(textBox1.Text);
+                    textBox1.Text = eredmeny.ToString();                 //osztás                    
+                    }
+                    else
+                    {
+                        textBox1.Text = "Nem vagy Chuck Norris";
+                    }
+                    break;
+                default: break;
+            }
+        }
+
+
                     textBox1.Text = eredmeny.ToString();                 //osztás
                     break;
 
